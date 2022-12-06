@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.headerSearchBar {
+  height: 32px;
+  width: 220px;
+  border: none;
+  border-bottom: 1px solid white;
+  background: black;
+}

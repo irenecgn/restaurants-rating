@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Lorem Ipsum",
+    "mapLocation": "Barcelona",
+    "tripadvisorUrl": "loremipsumloremipsum",
+    "location": 4,
+    "service": 6,
+    "food": 8,
+    "price": 9,
+    "averageScore": 6.75
+  },
+  {
+    "name": "Why do we use it?",
+    "mapLocation": "London",
+    "tripadvisorUrl": "natuserrorsitvoluptatem",
+    "location": 3,
+    "service": 7,
+    "food": 4,
+    "price": 9,
+    "averageScore": 7
+  }
+]
