@@ -6,6 +6,7 @@
   width: 480px;
   height: 560px;
   padding: 16px;
-  background-color: rgb(251, 251, 251);
+  /* background-color: rgb(251, 251, 251); */
+  background-color: rgb(199, 65, 90);
   box-shadow: rgba(35, 34, 36, 0.922) 0px 5.4px;
 }
