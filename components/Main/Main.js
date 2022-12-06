@@ -3,11 +3,11 @@ import Form from '../Form/Form';
 import List from '../List/List';
 import styles from './Main.module.css';
 
-function Main() {
+function Main({ restaurants }) {
   return (
     <div className={styles.main}>
       <Form />
-      <List />
+      <List restaurants={restaurants} />
     </div>
   );
 }

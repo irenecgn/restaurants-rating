@@ -1,0 +1,11 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(35, 34, 36);
+  border-radius: 12px;
+  width: 480px;
+  height: 560px;
+  padding: 16px;
+  background-color: rgb(251, 251, 251);
+  box-shadow: rgba(35, 34, 36, 0.922) 0px 5.4px;
+}

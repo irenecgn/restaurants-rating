@@ -1,9 +1,13 @@
 import React from 'react';
 import styles from './List.module.css';
-import DATA from '../../data.json';
+import Card from '../Card/Card';
 
-function List() {
-  return <div>LIST</div>;
+function List({ restaurants }) {
+  return (
+    <div className={styles.list}>
+      <Card restaurants={restaurants} />
+    </div>
+  );
 }
 
 export default List;

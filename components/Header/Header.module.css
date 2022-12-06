@@ -1,15 +1,17 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 72px;
   border-bottom: 1px solid #eaeaea;
+  padding: 0 16px;
 }
 
 .headerSearchBar {
   height: 32px;
   width: 220px;
   border: none;
-  border-bottom: 1px solid white;
-  background: black;
+  border-bottom: 1px solid rgb(35, 34, 36);
+  background: rgb(254, 253, 255);
+  color: rgb(35, 34, 36);
 }

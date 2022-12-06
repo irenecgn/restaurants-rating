@@ -1,0 +1,11 @@
+.list {
+  /* border: 1px solid forestgreen; */
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 50%;
+  height: 600px;
+  overflow: scroll;
+  padding: 16px;
+  gap: 12px;
+}
