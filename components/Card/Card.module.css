@@ -1,41 +1,45 @@
 .card {
   border: 1px solid rgb(35, 34, 36);
   border-radius: 12px;
-  width: 480px;
   padding: 16px;
-  /* background-color: rgb(251, 251, 251); */
-  background-color: rgb(231, 186, 194);
+  background-color: rgb(251, 251, 251);
   box-shadow: rgba(35, 34, 36, 0.922) 0px 5.4px;
 }
 
-.nameAverageScoreContainer {
+.card__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nameAverageScoreContainer h1 h2 {
+.card__title {
   margin: 0;
+  font-weight: 600;
+  font-size: 24px;
 }
 
-.locationUrlContainer {
+.card__body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding-bottom: 12px;
+  padding: 12px 0;
   border-bottom: 1px solid rgb(35, 34, 36);
 }
 
-.locationUrlContainer h3 {
+.card__subtitle {
   margin: 0;
 }
 
-.card li {
-  list-style-type: none;
-  padding: 0 8px;
+.card__footer {
+  padding-top: 12px;
 }
 
-.ratings {
-  display: flex;
+.card__list {
   padding: 0;
+}
+
+.card__list__item {
+  display: inline;
+  list-style-type: none;
+  padding-right: 36px;
 }
