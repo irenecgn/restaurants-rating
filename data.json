@@ -1,29 +1,29 @@
 [
   {
     "id": 0,
-    "name": "Lorem Ipsum",
+    "name": "Tuna Teca",
     "location": "Barcelona",
     "tripadvisorUrl": "https://www.tripadvisor.com/Restaurant_Review-g187497-d4049034-Reviews-BelleBuon-Barcelona_Catalonia.html",
-    "atmosphere": 4,
-    "service": 6,
-    "food": 8,
+    "atmosphere": 8,
+    "service": 7,
+    "food": 9,
     "price": 9,
-    "averageScore": 6.75
+    "averageScore": 11
   },
   {
     "id": 1,
-    "name": "Why do we use it?",
+    "name": "Temper Soho",
     "location": "London",
     "tripadvisorUrl": "https://www.tripadvisor.com/Restaurant_Review-g186338-d1516414-Reviews-Angus_Steakhouse_Oxford_Circus-London_England.html",
-    "atmosphere": 3,
-    "service": 7,
-    "food": 4,
-    "price": 9,
-    "averageScore": 7
+    "atmosphere": 8,
+    "service": 8,
+    "food": 8,
+    "price": 8,
+    "averageScore": 8
   },
   {
     "id": 2,
-    "name": "HolaHolaHola",
+    "name": "Hola",
     "location": "London",
     "tripadvisorUrl": "https://www.tripadvisor.com/Restaurant_Review-g186338-d1516414-Reviews-Angus_Steakhouse_Oxford_Circus-London_England.html",
     "atmosphere": 3,
@@ -34,7 +34,7 @@
   },
   {
     "id": 3,
-    "name": "Bello qui dolorem",
+    "name": "Bello qui",
     "location": "Barcelona",
     "tripadvisorUrl": "https://www.tripadvisor.com/Restaurant_Review-g186338-d1516414-Reviews-Angus_Steakhouse_Oxford_Circus-London_England.html",
     "atmosphere": 3,
@@ -56,7 +56,7 @@
   },
   {
     "id": 5,
-    "name": "Magni dolores eo",
+    "name": "Magni dolores",
     "location": "Barcelona",
     "tripadvisorUrl": "https://www.tripadvisor.com/Restaurant_Review-g186338-d1516414-Reviews-Angus_Steakhouse_Oxford_Circus-London_England.html",
     "atmosphere": 3,

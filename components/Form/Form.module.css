@@ -10,14 +10,10 @@
 .form__style {
   border: 1px solid rgba(35, 34, 36, 0.1);
   border-radius: 12px;
-  background-color: transparent;
+  background-color: rgba(251, 252, 219, 0.2);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
-
-/* .form__style:focus {
-  border: 3px solid rgba(255, 243, 240, 1);
-} */
 
 .form__body {
   display: flex;
@@ -28,13 +24,14 @@
 
 .form__body__input {
   height: 48px;
+  padding: 12px;
 }
 
 .form__score {
   display: grid;
   grid-template-columns: 120px 60px 120px 60px;
   column-gap: 8px;
-  row-gap: 16px;
+  row-gap: 24px;
   padding: 12px 16px;
 }
 
@@ -42,6 +39,7 @@
   height: 36px;
   width: 60px;
   border-radius: 8px;
+  padding: 12px;
 }
 
 .form__footer {
@@ -53,4 +51,18 @@
 .form__footer__button {
   height: 48px;
   width: 50%;
+  cursor: pointer;
+}
+
+.form__footer__button:hover,
+.form__body__input:hover,
+.form__score__input:hover {
+  background-color: rgb(255, 243, 240);
+  box-shadow: rgb(233, 222, 250) 0px 0px 0px 3px, #deebc4 0px 0px 0px 6px,
+    #fff3f0 0px 0px 0px 9px;
+}
+
+.form:hover {
+  box-shadow: rgb(233, 222, 250) 0px 0px 0px 3px, #deebc4 0px 0px 0px 6px,
+    #fff3f0 0px 0px 0px 9px;
 }

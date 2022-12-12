@@ -17,14 +17,14 @@ function Card({ restaurants }) {
       </div>
 
       <div className={styles['card__body']}>
-        <span className={styles['card__subtitle']}>
-          <GoLocation />
-          {restaurant.location}
-        </span>
-        <Link href={restaurant.tripadvisorUrl}>
-          <SiTripadvisor /> Visit Tripadvisor page
-        </Link>
+        <GoLocation />
+        <span>{restaurant.location}</span>
       </div>
+      <div className={styles['card__body']}>
+        <SiTripadvisor />
+        <Link href={restaurant.tripadvisorUrl}>Visit Tripadvisor page</Link>
+      </div>
+
       <div className={styles['card__footer']}>
         <span>RATINGS</span>
         <ul className={styles['card__list']}>
