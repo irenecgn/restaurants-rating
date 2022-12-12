@@ -3,15 +3,15 @@
   align-items: center;
   justify-content: flex-end;
   height: 72px;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 2px solid rgba(35, 34, 36, 0.1);
+
   padding: 0 16px;
 }
 
-.headerSearchBar {
-  height: 32px;
+.header__searchbar {
+  height: 48px;
   width: 220px;
   border: none;
-  border-bottom: 1px solid rgb(35, 34, 36);
-  background: rgb(254, 253, 255);
-  color: rgb(35, 34, 36);
+  border-bottom: 2px solid rgba(35, 34, 36, 0.1);
+  background: none;
 }

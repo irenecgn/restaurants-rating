@@ -2,15 +2,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: rgb(35, 34, 36);
   height: 100vh;
-  /* background: rgb(248, 250, 252); */
-  background-image: url(/background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
 }
 
 * {

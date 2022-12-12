@@ -4,7 +4,7 @@ function Header({ handleChange }) {
   return (
     <div className={styles.header}>
       <input
-        className={styles.headerSearchBar}
+        className={styles['header__searchbar']}
         placeholder='Type here your search...'
         onChange={handleChange}
       ></input>
