@@ -8,7 +8,7 @@
     "service": 7,
     "food": 9,
     "price": 9,
-    "averageScore": 11
+    "averageScore": 8.25
   },
   {
     "id": 1,
@@ -23,7 +23,7 @@
   },
   {
     "id": 2,
-    "name": "Hola",
+    "name": "Mister Pig",
     "location": "London",
     "tripadvisorUrl": "https://www.tripadvisor.com/Restaurant_Review-g186338-d1516414-Reviews-Angus_Steakhouse_Oxford_Circus-London_England.html",
     "atmosphere": 3,

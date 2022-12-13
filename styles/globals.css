@@ -1,23 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Figtree', sans-serif;
   color: rgb(35, 34, 36);
   height: 100vh;
-  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  background-color: rgb(245, 247, 250);
 }
 
 * {
   box-sizing: border-box;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: rgb(35, 34, 36);
-    background: rgb(248, 250, 252);
-  }
-} */

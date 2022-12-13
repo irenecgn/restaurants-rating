@@ -18,7 +18,4 @@
 
 .header__searchbar:hover {
   border-radius: 12px;
-  background-color: rgb(255, 243, 240);
-  box-shadow: rgb(233, 222, 250) 0px 0px 0px 3px, #deebc4 0px 0px 0px 6px,
-    #fff3f0 0px 0px 0px 9px;
 }

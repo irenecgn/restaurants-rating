@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Card.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
 import { GoLocation } from 'react-icons/go';
 import { SiTripadvisor } from 'react-icons/si';
 
@@ -17,16 +18,7 @@ function Card({ restaurants }) {
       </div>
 
       <div className={styles['card__body']}>
-        <GoLocation />
-        <span>{restaurant.location}</span>
-      </div>
-      <div className={styles['card__body']}>
-        <SiTripadvisor />
-        <Link href={restaurant.tripadvisorUrl}>Visit Tripadvisor page</Link>
-      </div>
-
-      <div className={styles['card__footer']}>
-        <span>RATINGS</span>
+        <span className={styles['card__subtitle']}>RATINGS</span>
         <ul className={styles['card__list']}>
           <li className={styles['card__list__item']}>
             Atmosphere: {restaurant.atmosphere}
@@ -42,6 +34,16 @@ function Card({ restaurants }) {
           </li>
         </ul>
       </div>
+
+      <div className={styles['card__footer']}>
+        <GoLocation />
+        <span>{restaurant.location}</span>
+      </div>
+      <div className={styles['card__footer']}>
+        <Link href={restaurant.tripadvisorUrl}>Visit Tripadvisor page</Link>
+      </div>
+
+      <Image src={restaurantImage} alt='Barcelona' width={200} height={400} />
     </div>
   ));
 }
