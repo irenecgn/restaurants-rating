@@ -1,5 +1,4 @@
 import React from 'react';
-
 import List from '../List/List';
 import styles from './Main.module.css';
 

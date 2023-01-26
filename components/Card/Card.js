@@ -11,7 +11,7 @@ function Card({ restaurants }) {
   );
 
   return sortedRestaurants.map((restaurant) => (
-    <div key={restaurant.id} className={styles.card}>
+    <article key={restaurant.id} className={styles.card}>
       <div className={styles['card__header']}>
         <span className={styles['card__title']}>{restaurant.name}</span>
         <span className={styles['card__title']}>{restaurant.averageScore}</span>
@@ -42,9 +42,8 @@ function Card({ restaurants }) {
       <div className={styles['card__footer']}>
         <Link href={restaurant.tripadvisorUrl}>Visit Tripadvisor page</Link>
       </div>
-
-      <Image src={restaurantImage} alt='Barcelona' width={200} height={400} />
-    </div>
+      {/* <Image src={restaurantImage} alt='Barcelona' width={200} height={400} /> */}
+    </article>
   ));
 }
 

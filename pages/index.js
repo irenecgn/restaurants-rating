@@ -4,9 +4,11 @@ import Header from '../components/Header/Header';
 import Container from '../components/Container/Container';
 import DATA from '../data.json';
 import { useState } from 'react';
+import Modal from '../components/Modal/Modal';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (event) => {
     const value = event.target.value.toLowerCase();
@@ -23,13 +25,20 @@ export default function Home() {
         .includes(searchQuery)
   );
 
+  const handleClick = () => {
+    setShowModal(!showModal);
+  };
+
   return (
     <Container>
       <Head>
-        <title>Restaurants Raiting</title>
+        <title>🍴Restaurants Raiting</title>
       </Head>
-      <Header handleChange={handleChange} />
+      <Header handleChange={handleChange} handleOpen={handleClick} />
       <Main restaurants={filteredRestaurants} />
+      <Modal isOpen={showModal} onClose={handleClick}>
+        <h1>Add restaurant</h1>
+      </Modal>
     </Container>
   );
 }

@@ -1,16 +1,25 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 72px;
   border-bottom: 2px solid rgba(35, 34, 36, 0.1);
   padding: 0 16px;
 }
 
+.header__button {
+  border-radius: 4px;
+  background-color: rgba(255, 251, 251, 0.9);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border: 1px solid rgba(35, 34, 36, 0.1);
+  height: 40px;
+  width: 40px;
+}
+
 .header__searchbar {
   height: 48px;
   width: 220px;
-  padding: 12px;
   border: none;
   border-bottom: 2px solid rgba(35, 34, 36, 0.1);
   background: none;

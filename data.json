@@ -64,5 +64,27 @@
     "food": 4,
     "price": 9,
     "averageScore": 6.89
+  },
+  {
+    "id": 6,
+    "name": "Magni dolores",
+    "location": "Barcelona",
+    "tripadvisorUrl": "https://www.tripadvisor.com/Restaurant_Review-g186338-d1516414-Reviews-Angus_Steakhouse_Oxford_Circus-London_England.html",
+    "atmosphere": 3,
+    "service": 7,
+    "food": 4,
+    "price": 9,
+    "averageScore": 4.6
+  },
+  {
+    "id": 7,
+    "name": "Magni dolores",
+    "location": "Barcelona",
+    "tripadvisorUrl": "https://www.tripadvisor.com/Restaurant_Review-g186338-d1516414-Reviews-Angus_Steakhouse_Oxford_Circus-London_England.html",
+    "atmosphere": 3,
+    "service": 7,
+    "food": 4,
+    "price": 9,
+    "averageScore": 8.89
   }
 ]
