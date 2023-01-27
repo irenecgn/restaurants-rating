@@ -5,6 +5,7 @@ import Container from '../components/Container/Container';
 import DATA from '../data.json';
 import { useState } from 'react';
 import Modal from '../components/Modal/Modal';
+import Footer from '../components/Footer/Footer';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -37,8 +38,9 @@ export default function Home() {
       <Header handleChange={handleChange} handleOpen={handleClick} />
       <Main restaurants={filteredRestaurants} />
       <Modal isOpen={showModal} onClose={handleClick}>
-        <h1>Add restaurant</h1>
+        <h1>Add new restaurant</h1>
       </Modal>
+      <Footer />
     </Container>
   );
 }

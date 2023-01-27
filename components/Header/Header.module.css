@@ -15,6 +15,7 @@
   border: 1px solid rgba(35, 34, 36, 0.1);
   height: 40px;
   width: 40px;
+  cursor: pointer;
 }
 
 .header__searchbar {

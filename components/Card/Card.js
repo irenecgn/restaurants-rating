@@ -5,10 +5,19 @@ import Image from 'next/image';
 import { GoLocation } from 'react-icons/go';
 import { SiTripadvisor } from 'react-icons/si';
 
+const MAX_SCORE = 10;
+
 function Card({ restaurants }) {
   const sortedRestaurants = restaurants.sort(
     (a, b) => b.averageScore - a.averageScore
   );
+
+  const getScore = (score) => {
+    const rest = MAX_SCORE - score;
+    return '★'.repeat(score) + '☆'.repeat(rest);
+  };
+
+  console.log(getScore(7));
 
   return sortedRestaurants.map((restaurant) => (
     <article key={restaurant.id} className={styles.card}>
@@ -21,16 +30,16 @@ function Card({ restaurants }) {
         <span className={styles['card__subtitle']}>RATINGS</span>
         <ul className={styles['card__list']}>
           <li className={styles['card__list__item']}>
-            Atmosphere: {restaurant.atmosphere}
+            Atmosphere:{getScore(restaurant.atmosphere)}
           </li>
           <li className={styles['card__list__item']}>
-            Service: {restaurant.service}
+            Service: {getScore(restaurant.service)}
           </li>
           <li className={styles['card__list__item']}>
-            Food: {restaurant.food}
+            Food: {getScore(restaurant.food)}
           </li>
           <li className={styles['card__list__item']}>
-            Price: {restaurant.price}
+            Price: {getScore(restaurant.price)}
           </li>
         </ul>
       </div>
