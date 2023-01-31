@@ -12,4 +12,16 @@ const getAllRestaurants = async function (req, res) {
   }
 };
 
-module.exports = { getAllRestaurants };
+const postNewRestaurant = async function (req, res) {
+  try {
+    const restaurant = req.body;
+    const addRestaurant = await Restaurant.create(restaurant);
+    res.status(201);
+    res.send(addRestaurant);
+  } catch (error) {
+    console.log(error);
+    res.status(400);
+  }
+};
+
+module.exports = { getAllRestaurants, postNewRestaurant };

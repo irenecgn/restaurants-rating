@@ -6,7 +6,7 @@ import DATA from '../data.json';
 import { useEffect, useState } from 'react';
 import Modal from '../components/Modal/Modal';
 import Footer from '../components/Footer/Footer';
-import { getAllRestaurants } from '../Utilities/Service';
+import { getAllRestaurants, postNewRestaurant } from '../Utilities/Service';
 
 export default function Home() {
   const [restaurants, setRestaurants] = useState([]);
@@ -23,18 +23,39 @@ export default function Home() {
     setRestaurants(data);
   }
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const modalInput = {
+      name: event.target.name.value,
+      location: event.target.location.value,
+      tripadvisorUrl: event.target.tripadvisorUrl.value,
+      atmosphere: event.target.atmosphere.value,
+      service: event.target.service.value,
+      food: event.target.food.value,
+      price: event.target.price.value,
+      averageScore:
+        (event.target.atmosphere.valueAsNumber +
+          event.target.service.valueAsNumber +
+          event.target.food.valueAsNumber +
+          event.target.price.valueAsNumber) /
+        4,
+    };
+
+    await postNewRestaurant(modalInput);
+    getRestaurants();
+    event.target.reset();
+  };
+
   useEffect(() => {
     getRestaurants();
   }, []);
 
   const filteredRestaurants = restaurants.filter(
     (restaurant) =>
-      restaurant.name.toLocaleLowerCase().includes(searchQuery) ||
-      restaurant.location.toLocaleLowerCase().includes(searchQuery) ||
-      restaurant.averageScore
-        .toString()
-        .toLocaleLowerCase()
-        .includes(searchQuery)
+      restaurant.name.toLowerCase().includes(searchQuery) ||
+      restaurant.location.toLowerCase().includes(searchQuery) ||
+      restaurant.averageScore.toString().toLowerCase().includes(searchQuery)
   );
 
   const handleClick = () => {
@@ -48,7 +69,7 @@ export default function Home() {
       </Head>
       <Header handleChange={handleChange} handleOpen={handleClick} />
       <Main restaurants={filteredRestaurants} />
-      <Modal isOpen={showModal} onClose={handleClick}>
+      <Modal isOpen={showModal} onClose={handleClick} onSubmit={handleSubmit}>
         <h1>Add new restaurant</h1>
       </Modal>
       <Footer />
