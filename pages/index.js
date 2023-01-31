@@ -3,11 +3,13 @@ import Main from '../components/Main/Main';
 import Header from '../components/Header/Header';
 import Container from '../components/Container/Container';
 import DATA from '../data.json';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Modal from '../components/Modal/Modal';
 import Footer from '../components/Footer/Footer';
+import { getAllRestaurants } from '../Utilities/Service';
 
 export default function Home() {
+  const [restaurants, setRestaurants] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [showModal, setShowModal] = useState(false);
 
@@ -16,7 +18,16 @@ export default function Home() {
     setSearchQuery(value);
   };
 
-  const filteredRestaurants = DATA.filter(
+  async function getRestaurants() {
+    const data = await getAllRestaurants();
+    setRestaurants(data);
+  }
+
+  useEffect(() => {
+    getRestaurants();
+  }, []);
+
+  const filteredRestaurants = restaurants.filter(
     (restaurant) =>
       restaurant.name.toLocaleLowerCase().includes(searchQuery) ||
       restaurant.location.toLocaleLowerCase().includes(searchQuery) ||

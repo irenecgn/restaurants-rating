@@ -17,10 +17,8 @@ function Card({ restaurants }) {
     return '★'.repeat(score) + '☆'.repeat(rest);
   };
 
-  console.log(getScore(7));
-
   return sortedRestaurants.map((restaurant) => (
-    <article key={restaurant.id} className={styles.card}>
+    <article key={restaurant._id} className={styles.card}>
       <div className={styles['card__header']}>
         <span className={styles['card__title']}>{restaurant.name}</span>
         <span className={styles['card__title']}>{restaurant.averageScore}</span>
