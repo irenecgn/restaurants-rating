@@ -8,6 +8,8 @@
 }
 
 .header__button {
+  display: flex;
+  align-items: center;
   border-radius: 4px;
   background-color: rgba(255, 251, 251, 0.9);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
@@ -16,6 +18,11 @@
   height: 40px;
   width: 40px;
   cursor: pointer;
+}
+
+.header__button__icon {
+  height: 24px;
+  width: 24px;
 }
 
 .header__searchbar {

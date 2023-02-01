@@ -1,12 +1,13 @@
 import styles from './Header.module.css';
-import { IoAddOutline } from 'react-icons/io';
+import { BsPlus } from 'react-icons/bs';
 
-function Header({ handleChange, handleOpen }) {
+function Header({ handleChange, onAddRestaurant }) {
   return (
     <div className={styles.header}>
-      <button className={styles['header__button']} onClick={handleOpen}>
-        +
+      <button className={styles['header__button']} onClick={onAddRestaurant}>
+        <BsPlus className={styles['header__button__icon']} />
       </button>
+
       <input
         className={styles['header__searchbar']}
         placeholder='Type here your search...'
