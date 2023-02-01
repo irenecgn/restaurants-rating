@@ -1,27 +1,5 @@
-/* .list {
-  display: flex;
-  flex-direction: column;
-  height: 680px;
-  overflow: scroll;
-  padding: 60px 0;
-  gap: 12px;
-
-} */
-
 .list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 16px;
-  /* justify-content: space-evenly;
-  margin: 0;
-  gap: 1%; */
 }
-
-/* @media (min-width: 600px) {
-  .list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    margin: 0;
-  }
-} */
