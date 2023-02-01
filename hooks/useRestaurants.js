@@ -19,7 +19,7 @@ export function useRestaurants() {
       (restaurant) =>
         restaurant.name.toLowerCase().includes(searchQuery) ||
         restaurant.location.toLowerCase().includes(searchQuery) ||
-        restaurant.averageScore.toString().toLowerCase().includes(searchQuery)
+        restaurant.averageScore.toString().includes(searchQuery)
     );
   }
 

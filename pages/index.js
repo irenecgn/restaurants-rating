@@ -8,6 +8,7 @@ import Footer from '../components/Footer/Footer';
 import styles from '../styles/form.module.css';
 import { useRestaurants } from '../hooks/useRestaurants';
 import { useBoolean } from '../hooks/useBoolean';
+import { CgCloseR } from 'react-icons/cg';
 
 export default function Home() {
   const { restaurants, createRestaurant, getFilteredRestaurants } =
@@ -54,77 +55,79 @@ export default function Home() {
       </Head>
       <Header handleChange={handleChange} onAddRestaurant={openModal} />
       <Main restaurants={filteredRestaurants} />
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <h1>Add new restaurant</h1>
-        <form className={styles['form']} onSubmit={handleSubmit}>
-          <div className={styles['form__body']}>
-            <label>Name</label>
+      <Modal isOpen={isModalOpen}>
+        <form onSubmit={handleSubmit} className={styles['form']}>
+          <div className={`${styles.form__container} `}>
             <input
               type='text'
-              className={styles['form__body__input']}
+              className={styles['form__input']}
               name='name'
+              placeholder='Name'
             ></input>
 
-            <label>Location</label>
             <input
               type='text'
-              className={styles['form__body__input']}
+              className={styles['form__input']}
               name='location'
+              placeholder='Location'
             ></input>
-
-            <label>Tripadvisor Url</label>
             <input
               type='url'
-              className={styles['form__body__input']}
+              className={styles['form__input']}
               name='tripadvisorUrl'
+              placeholder='Trip Advisor URL'
             ></input>
           </div>
-          <div className={styles['form__score']}>
+          <div className={`${styles.form__body}`}>
             <label>Atmosphere</label>
             <input
               type='number'
               min='0'
               max='10'
-              className={styles['form__score__input']}
+              className={styles['form__input']}
               name='atmosphere'
             />
-
+          </div>
+          <div className={`${styles.form__body}`}>
             <label>Service</label>
             <input
               type='number'
               min='0'
               max='10'
-              className={styles['form__score__input']}
+              className={styles['form__input']}
               name='service'
             />
-
+          </div>
+          <div className={`${styles.form__body}`}>
             <label>Food</label>
             <input
               type='number'
               min='0'
               max='10'
-              className={styles['form__score__input']}
+              className={styles['form__input']}
               name='food'
             />
-
+          </div>
+          <div className={`${styles.form__body}`}>
             <label>Price</label>
             <input
               type='number'
               min='0'
               max='10'
-              className={styles['form__score__input']}
+              className={styles['form__input']}
               name='price'
             />
           </div>
-          <div className={styles['form__footer']}>
+
+          <div className={`${styles.form__container} `}>
             <button className={styles['form__footer__button']} type='submit'>
               Create!
             </button>
           </div>
+          <div className={styles['form__icon__container']}>
+            <CgCloseR className={styles['form__icon']} onClick={closeModal} />
+          </div>
         </form>
-        <button onClick={closeModal} className={styles['modal__button']}>
-          Close
-        </button>
       </Modal>
       <Footer />
     </Container>

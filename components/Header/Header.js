@@ -3,7 +3,7 @@ import { BsPlus } from 'react-icons/bs';
 
 function Header({ handleChange, onAddRestaurant }) {
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <button className={styles['header__button']} onClick={onAddRestaurant}>
         <BsPlus className={styles['header__button__icon']} />
       </button>
@@ -13,7 +13,7 @@ function Header({ handleChange, onAddRestaurant }) {
         placeholder='Type here your search...'
         onChange={handleChange}
       ></input>
-    </div>
+    </header>
   );
 }
 

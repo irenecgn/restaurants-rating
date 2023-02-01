@@ -32,7 +32,3 @@
   border-bottom: 2px solid rgba(35, 34, 36, 0.1);
   background: none;
 }
-
-.header__searchbar:hover {
-  border-radius: 12px;
-}

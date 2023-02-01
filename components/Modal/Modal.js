@@ -7,9 +7,8 @@ function Modal({ isOpen, children }) {
     isOpen &&
     createPortal(
       <div className={styles['modal']}>
-        <div className={styles['modal__content']}>
-          <div className={styles['modal__header']}>{children}</div>
-        </div>
+        <h1 className={styles['modal__title']}>Add a new restaurant</h1>
+        {children}
       </div>,
       document.body
     )
